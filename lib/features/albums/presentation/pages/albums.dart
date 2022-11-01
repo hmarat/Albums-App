@@ -14,7 +14,7 @@ class AlbumsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(8),
             color: Colors.white,
           ),
           height: 40,

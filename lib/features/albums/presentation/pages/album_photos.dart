@@ -31,7 +31,7 @@ class AlbumPhotosScreen extends StatelessWidget {
                 child: CircularProgressIndicator(),
               ),
               albumPhotosLoaded: (photos) => ListView.separated(
-                padding: const EdgeInsets.only(top: 16),
+                padding: const EdgeInsets.all(16),
                 separatorBuilder: (_, __) => const SizedBox(
                   height: 24,
                 ),

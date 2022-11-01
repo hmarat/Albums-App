@@ -30,10 +30,16 @@ class _SearchFieldState extends State<SearchField> {
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.all(8),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(8),
+          borderSide: const BorderSide(
+            color: Colors.transparent,
+          ),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(8),
+          borderSide: const BorderSide(
+            color: Colors.transparent,
+          ),
         ),
         hintText: 'Search by title',
       ),

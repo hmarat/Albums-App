@@ -13,7 +13,10 @@ class AlbumPhotoItem extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
+        insetPadding: EdgeInsets.zero,
+        contentPadding: EdgeInsets.zero,
         content: Image.network(photo.url),
+        elevation: 0,
       ),
     );
   }
@@ -25,10 +28,23 @@ class AlbumPhotoItem extends StatelessWidget {
       onTap: () => handleZoomIn(context),
       child: Row(
         children: [
-          Image.network(
-            photo.thumbnailUrl,
-            height: 100,
-            width: 100,
+          Stack(
+            alignment: Alignment.center,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image.network(
+                  photo.thumbnailUrl,
+                  height: 100,
+                  width: 100,
+                ),
+              ),
+              const Icon(
+                Icons.zoom_in,
+                size: 30,
+                color: Colors.white,
+              ),
+            ],
           ),
           const SizedBox(width: 16),
           Expanded(
@@ -36,11 +52,6 @@ class AlbumPhotoItem extends StatelessWidget {
               photo.title,
               style: Theme.of(context).textTheme.subtitle1,
             ),
-          ),
-          const SizedBox(width: 8),
-          IconButton(
-            onPressed: () => handleZoomIn(context),
-            icon: const Icon(Icons.zoom_in),
           ),
         ],
       ),
