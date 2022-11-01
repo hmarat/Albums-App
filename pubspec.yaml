@@ -1,0 +1,40 @@
+name: albums
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.2 <3.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  json_annotation: ^4.7.0
+  dartz: ^0.10.1
+  dio: ^4.0.6
+  retrofit: ^3.3.1
+  get_it: ^7.2.0
+  logger: ^1.1.0
+  flutter_bloc: ^8.1.1
+  freezed_annotation: ^2.2.0
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  json_serializable: ^6.5.4
+  build_runner: ^2.3.2
+  retrofit_generator: ^4.2.0
+  freezed: ^2.2.1
+
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  uses-material-design: true
